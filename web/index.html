@@ -1,0 +1,291 @@
+<html leng="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tabulator - Live Demo</title>
+
+	<link rel="stylesheet" href="static/css/jquery-ui.css">
+	<link href='static/css/css.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/tabulator.css">
+
+	<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="static/js/tabulator.js"></script>
+</head>
+<body>
+
+	<style type="text/css">
+		body{
+			padding:20px 40px;
+			font-family: 'Montserrat', sans-serif !important;
+		}
+
+		header{
+			font-weight: bold;
+			font-size: 30px;
+		}
+
+		header span{
+			vertical-align: middle;
+			font-size: .5em;
+			color: #999;
+		}
+
+		header span a{
+			font-size: .9em;
+		}
+
+		section:first-of-type header{
+			font-size: 50px;
+		}
+
+		section{
+			margin-bottom:30px;
+		}
+
+		ul>li{
+			margin-bottom:2px;
+		}
+
+		button, select{
+			margin-right:20px;
+		}
+
+		input{
+			font-family: 'Montserrat', sans-serif !important;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+
+	//sample data to be used in all tabulators
+//	var tabledata = [
+//	{name:"Oli Bob \n steve", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1, lucky_no:5},
+//	{name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true, lucky_no:10},
+//	{name:"Christine Lobowski", age:"42", height:0, col:"green", dob:"22/05/1982", cheese:"true", lucky_no:12},
+//	{name:"Brendon Philips", age:"125", gender:"male", height:1, col:"orange", dob:"01/08/1980", lucky_no:18},
+//	{name:"Margret Marmajuke", age:"16", gender:"female", height:5, col:"yellow", dob:"31/01/1999", lucky_no:33},
+//	{name:"Frank Harbours", age:"38", gender:"male", height:4, col:"red", dob:"", cheese:1, lucky_no:2},
+//	{name:"Jamie Newhart", age:"23", gender:"male", height:3, col:"green", dob:"14/05/1985", cheese:true, lucky_no:63},
+//	{name:"Gemma Jane", age:"60", height:0, col:"red", dob:"22/05/1982", cheese:"true", lucky_no:72},
+//	{name:"Emily Sykes", age:"42", gender:"female", height:1, col:"maroon", dob:"11/11/1970", lucky_no:44},
+//	{name:"James Newman", age:"73", gender:"male", height:5, col:"red", dob:"22/03/1998", lucky_no:9},
+//	{ name:"Oli Bob \n steve", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1, lucky_no:5},
+//	{name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true, lucky_no:10},
+//	{name:"Christine Lobowski", age:"42", height:0, col:"green", dob:"22/05/1982", cheese:"true", lucky_no:12},
+//	{name:"Brendon Philips", age:"125", gender:"male", height:1, col:"orange", dob:"01/08/1980", lucky_no:18},
+//	{ name:"Margret Marmajuke", age:"16", gender:"female", height:5, col:"yellow", dob:"31/01/1999", lucky_no:33},
+//	{name:"Frank Harbours", age:"38", gender:"male", height:4, col:"red", dob:"", cheese:1, lucky_no:2},
+//	{ name:"Jamie Newhart", age:"23", gender:"male", height:3, col:"green", dob:"14/05/1985", cheese:true, lucky_no:63},
+//	{ name:"Gemma Jane", age:"60", height:0, col:"red", dob:"22/05/1982", cheese:"true", lucky_no:72},
+//	{name:"Emily Sykes", age:"42", gender:"female", height:1, col:"maroon", dob:"11/11/1970", lucky_no:44},
+//	{id:20, name:"James Newman", age:"73", gender:"male", height:5, col:"red", dob:"22/03/1998", lucky_no:9},
+//	];
+	
+	
+	
+
+</script>
+
+<section>
+	<!--<header>Filter Data <span> - for full documentation visit <a href="http://olifolkerd.github.io/tabulator/docs/#filtering">http://olifolkerd.github.io/tabulator/docs/#filtering</a></span></header>
+	<p></p>
+	<p>Tabulator allows you to filter the table data by any field in the data set.</p>
+
+	<p>To set a filter you need to call the <strong>setFilter</strong> method, passing the field you wish to filter, the comparison type and the value to filter for</p>-->
+
+	<!--<p>
+		Tabulator comes with a number of filter comparison types including:
+		<ul>
+			<li><strong>=</strong> - Displays only rows with data that is the same as the filter</li>
+			<li><strong>&lt;</strong> - displays rows with a value less than the filter value</li>
+			<li><strong>&lt;=</strong> - displays rows with a value less than or qual to the filter value</li>
+			<li><strong>&gt;</strong> - displays rows with a value greater than the filter value</li>
+			<li><strong>&gt;=</strong> - displays rows with a value greater than or qual to the filter value</li>
+			<li><strong>!=</strong> - displays rows with a value that is not equal to the filter value</li>
+			<li><strong>like</strong> - displays any rows with data that contains the specified string anywhere in the specified field. (case insesitive)</li>
+		</ul>
+	</p>-->
+
+	<p>
+		<fieldset>
+			<legend>Filter Parameters</legend>
+
+
+			<label>Field: </label>
+			<select id="filter-field">
+				<option></option>
+				<option value="name">URL</option>
+				<option value="age">城市</option>
+				<option value="gender">City</option>
+				<option value="height">行业</option>
+				<option value="col">industry</option>
+
+			</select>
+
+
+			<label>Type:</label>
+			<select id="filter-type">
+				<option value="=">=</option>
+				<option value="<">&lt;</option>
+				<option value="<=">&lt;=</option>
+				<option value=">">&gt;</option>
+				<option value=">=">&gt;=</option>
+				<option value="!=">!=</option>
+				<option value="like">like</option>
+			</select>
+
+
+			<label>Value: </label><input id="filter-value" type="text" placeholder="value to filter">
+
+			<input id="filter-clear" type="button" value="Clear Filter" style="margin-left:40px;">
+
+		</fieldset>
+
+	</p>
+
+	<div id="example-table-filters"></div>
+	<script type="text/javascript">
+		function Ajax(){
+			var defer = $.Deferred();
+			$.ajax({			
+				url:'xueqiu.url.types',
+				type:'GET', 
+				//scriptCharset: 'gbk', 
+				success:function(msg){
+					//console.log(msg);
+					defer.resolve(msg);
+				}
+			});
+			return defer.promise();
+		}
+		$.when(Ajax()).done(function(data){
+			function csvJSON(csv){	
+			  	var lines=csv.split("\n");			
+			  	var result = [];		
+			  	// xueqiu.url.types
+			  	var headers= ["url","城市","city","行业","industry"];
+			  	// xueqiu.crumb
+			  	//var headers= ["url","名称","简介","time"];
+			  	for(var i=0;i<lines.length-1;i++){
+				  	var obj = {};
+				  	var currentline=lines[i].split("\t");
+				  	for(var j=0;j<headers.length;j++){
+					  	obj[headers[j]] = currentline[j];
+				  	}
+				  	result.push(obj);			
+			  	}
+			  	console.log(typeof(result))			  	
+			  	return result; //JSON
+			}
+			var table_data = csvJSON(data);
+
+			function customFilter(data){
+				return data.cheese && data.height < 3;
+			}
+	
+			function updateFilter(){
+	
+				var filter = $("#filter-field").val() == "function" ? customFilter : $("#filter-field").val();
+	
+				if($("#filter-field").val() == "function" ){
+					$("#filter-type").prop("disabled", true);
+					$("#filter-value").prop("disabled", true);
+				}else{
+					$("#filter-type").prop("disabled", false);
+					$("#filter-value").prop("disabled", false);
+				}
+	
+				$("#example-table-filters").tabulator("setFilter", filter, $("#filter-type").val(), $("#filter-value").val());
+			}
+	
+			$("#filter-field, #filter-type").change(updateFilter);
+			$("#filter-value").keyup(updateFilter);
+	
+			$("#filter-clear").click(function(){
+				$("#filter-field").val("");
+				$("#filter-type").val("=");
+				$("#filter-value").val("");
+	
+				$("#example-table-filters").tabulator("clearFilter");
+			});
+	
+	
+	
+			$("#example-table-filters").tabulator({
+//					height:"328px",
+				fitColumns:true,
+				pagination:true,
+				paginationSize:31,
+				columns:[
+				{title:"URL", field:"url", width:400},
+				{title:"城市", field:"城市"},
+				{title:"City", field:"city"},
+				{title:"行业", field:"行业",width:100},
+				{title:"Industry", field:"industry"},
+				],
+			});
+	
+			$("#example-table-filters").tabulator("setData", table_data);
+			$("#example-table-pagination").tabulator("setPage", 1);
+	
+			$(window).resize(function(){
+				$("#example-table-filters").tabulator("redraw");
+			});
+			var tableRows = $(".tabulator-row.tabulator-selectable").length;
+			var rowHeight = $(".tabulator-row.tabulator-selectable").height();
+			$(".tabulator-tableHolder").height(tableRows*rowHeight);
+			$(".tabulator-tableHolder").css("min-height",0);
+		})
+
+	</script>
+</section>
+
+
+<!--<section>
+	<header>Pagination<span> - for full documentation visit <a href="http://olifolkerd.github.io/tabulator/docs/#pagination">http://olifolkerd.github.io/tabulator/docs/#pagination</a></span></header>
+
+	<p>Tabulator allows you to paginate your data. simply set the <strong>pagination</strong> property to true.</p>
+
+	<p>If you have set the height of the table then the data will be automatically paginated to fit within the table.</p>
+
+	<p>If you wish to define how many rows should be shown on a page, set this in the <strong>paginationSize</strong> property. If you set the paginationSize without setting the height, the Tabulator will automatically resize to fit the data</p>
+
+	<div id="example-table-pagination"></div>
+	<script type="text/javascript">
+
+
+		var printIcon = function(value, data, cell, row, options){ //plain text value
+			return "<i class='fa fa-print'></i> "
+		};
+
+		$("#example-table-pagination").tabulator({
+			height:"166px",
+			fitColumns:true,
+			pagination:true,
+			paginationSize:6,
+			columns:[
+			{title:"Name", field:"name", width:200},
+			{title:"Age", field:"age", formatter:"progress", sorter:"number"},
+			{title:"Gender", field:"gender"},
+			{title:"Height", field:"height", formatter:"star", align:"center", width:100},
+			{title:"Favourite Color", field:"col"},
+			{title:"Date Of Birth", field:"dob", align:"center", sorter:"date"},
+			{title:"Likes Cheese", field:"cheese", align:"center", formatter:"tickCross"},
+			],
+		});
+
+		$("#example-table-pagination").tabulator("setData", tabledata);
+
+		$("#example-table-pagination").tabulator("setPage", 1);
+
+		$(window).resize(function(){
+			$("#example-table-pagination").tabulator("redraw");
+		});
+
+	</script>
+</section>-->
+
+</body>
+</html>
