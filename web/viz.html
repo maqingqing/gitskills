@@ -65,7 +65,7 @@
    var parseDate = d3.time.format("%Y-%m-%d").parse;
 
 
-       d3.csv("http://127.0.0.1/rate7.csv",function(error,data){
+       d3.csv("rate7.csv",function(error,data){
     if(error){
         console.log(error);
     }else{
@@ -99,7 +99,7 @@
 
 
        
-       d3.csv("http://127.0.0.1/non-agri.csv",function(error,nonagri){
+       d3.csv("non-agri.csv",function(error,nonagri){
         if(error){
         console.log(error);
         }else{
